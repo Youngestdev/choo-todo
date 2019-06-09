@@ -38,7 +38,7 @@ class Notes extends Component {
 
   addNote (e) {
     var note = e.target.value
-    // Can't I used tenary here...? 
+    // Can't I use tenary here...? 
     if (e.keyCode === 13) {
       e.target.value = ''
       this.emit('notes:add', note)
