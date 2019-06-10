@@ -37,7 +37,7 @@ function onsubmit (e) {
   var headers = new Headers({ 'Content-Type': 'application/json' })   
   var body = {}
   for (var pair of data.entries()) body[pair[0]] = pair[1]                                                    
-  fetch('/', { method: 'POST', body, headers })            
+  fetch(window.location+'/', { method: 'POST', body, headers })            
       .then(res => {
       if (!res.ok) return console.log('oh no!')
       emit('notes:auth', body)
