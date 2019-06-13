@@ -14,7 +14,7 @@ function view (state, emit) {
     <body>
       <section class="notes">
         ${state.cache(Header, 'header').render()}  
-        ${state.notes.authenticated === true ? state.cache(Notes, 'notes').render() : '' }
+        ${state.notes.authenticated === true ? state.cache(Notes, 'notes').render() : html`<br/> <p>Heyo!, Login to view and add notes</p>` }
       </section>
     </body>
   `

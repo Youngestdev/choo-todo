@@ -42,6 +42,6 @@ function onsubmit (e) {
       if (!res.ok) return console.log('oh no!')
       emit('notes:auth.register', body)
     })
-    .catch(err => console.log('oh no!'))
+    .catch(err => console.log('oh no!', err))
   }
 }
