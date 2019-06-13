@@ -1,6 +1,6 @@
 var html = require('choo/html')
 
-var TITLE = "Notes and Quick To-dos!"
+var TITLE = "Notes and Quick To-dos! - Login"
 
 module.exports = view
 
@@ -27,6 +27,7 @@ function view (state, emit) {
         ><br />
         <input type="submit" value="Login">
       </form>
+      <p> Don't have no login details yet ?, <a href='/register'> Register then... </a></p>
     </body>
   `
 
@@ -40,7 +41,7 @@ function onsubmit (e) {
   fetch(window.location+'/', { method: 'POST', body, headers })            
       .then(res => {
       if (!res.ok) return console.log('oh no!')
-      emit('notes:auth', body)
+      emit('notes:auth.login', body)
     })
     .catch(err => console.log('oh no!'))
   }
