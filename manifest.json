@@ -1,7 +1,7 @@
 {
-  "name": "books",
-  "short_name": "books",
-  "description": "Build a sample project",
+  "name": "Quick Notes and To-dos",
+  "short_name": "Notes",
+  "description": "Simple Notes/To-do app with basic authentication.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000",
