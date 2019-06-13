@@ -14,6 +14,7 @@ app.use(require('./stores/notes'))
 
 app.route('/', require('./views/main'))
 app.route('/login', require('./views/login'))
+app.route('/register', require('./views/register'))
 app.route('/*', require('./views/404'))
 
 module.exports = app.mount('body')
