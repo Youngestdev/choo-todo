@@ -15,9 +15,9 @@ class Header extends Component {
 
     return html`
       <header class="header">
-        <h1>
+        <h3>
           Notes App
-        </h1>
+        </h3>
         <nav>
         ${!this.authenticated ? html` 
           <button onclick=${this.onclick}>
