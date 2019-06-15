@@ -14,6 +14,7 @@ function store (state, emitter) {
   state.users = {}
   emitter.on('DOMContentLoaded', function () {
     // Using Localstorage
+    localStorage.setItem('user', null)
     localStorage.getItem('notes') === null ? localStorage.setItem('notes', JSON.stringify(state.notes.notes)) : 
     // Let state.notes.notes be equal to the data from localstorage!
     state.notes.notes = JSON.parse(localStorage.getItem('notes'))

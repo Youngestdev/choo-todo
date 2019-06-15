@@ -22,7 +22,7 @@ class Notes extends Component {
     return html`
       <div class="notes">
         <h3> Notes </h3>
-        ${this.notes.map(x => Note(x))}
+        ${this.notes.map(notes => Note(notes))}
         <input
           autofocus
           placeholder="Add a new short note..."
@@ -38,7 +38,7 @@ class Notes extends Component {
 
   addNote (e) {
     var note = e.target.value
-    // Can't I use tenary here...? 
+    // Can't I use ternary here...? 
     if (e.keyCode === 13) {
       e.target.value = ''
       this.emit('notes:add', note)
